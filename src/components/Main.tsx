@@ -27,7 +27,7 @@ function Main() {
 
   return (
     <div className='flex w-[calc(100%-20rem)] flex-col pb-8 pt-16'>
-      <h1 className='mx-36 mb-8 flex shrink-0 truncate text-xl text-neutral-600'>
+      <h1 className='mx-12 mb-8 flex shrink-0 truncate text-xl text-neutral-600 xl:mx-36'>
         <MainIcon selected={state.selected} />
         <span className='truncate'>{label}</span>
       </h1>
@@ -37,7 +37,7 @@ function Main() {
       )}
 
       {showBanner && (
-        <div className='mx-32 flex h-10 items-center rounded-lg border border-neutral-300/75 bg-neutral-200/50 px-4 text-lg text-neutral-500'>
+        <div className='mx-8 flex h-10 items-center rounded-lg border border-neutral-300/75 bg-neutral-200/50 px-4 text-lg text-neutral-500 xl:mx-32'>
           {state.selected} tasks will appear here
         </div>
       )}
@@ -72,7 +72,7 @@ function Main() {
               })
             }
             className={clsx(
-              'mb-1 ml-32 w-fit text-neutral-400 hover:bg-neutral-200 hover:text-neutral-600',
+              'mb-1 ml-8 w-fit text-neutral-400 hover:bg-neutral-200 hover:text-neutral-600 xl:ml-32',
               Boolean(todo.length) && 'mt-4'
             )}
           >

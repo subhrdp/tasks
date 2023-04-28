@@ -12,7 +12,7 @@ function CreateTask() {
   const dispatch = useContext(DispatchContext);
 
   return (
-    <div className={clsx('mx-32 mb-8 shrink-0', create && 'relative')}>
+    <div className={clsx('mx-8 mb-8 shrink-0 xl:mx-32', create && 'relative')}>
       {create ? (
         <Input
           name=''
