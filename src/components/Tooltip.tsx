@@ -3,6 +3,7 @@ import { createPortal } from 'react-dom';
 import {
   useFloating,
   autoUpdate,
+  offset,
   flip,
   shift,
   useHover,
@@ -14,24 +15,25 @@ import {
 
 type Props = {
   children: (attrs: React.HTMLAttributes<HTMLButtonElement>) => React.ReactNode;
-  message: string;
+  label: string;
   buttonRef?: any;
 };
 
-function Tooltip({ children, message, buttonRef }: Props) {
+function Tooltip({ children, label, buttonRef }: Props) {
   const [isOpen, setIsOpen] = useState(false);
 
   const { x, y, strategy, refs, context } = useFloating({
+    strategy: 'fixed',
     placement: 'top',
     open: isOpen,
     onOpenChange: setIsOpen,
-    middleware: [flip(), shift()],
+    middleware: [offset(8), flip(), shift()],
     whileElementsMounted: autoUpdate,
   });
 
   const hover = useHover(context, {
     delay: {
-      open: 300,
+      open: 250,
       close: 0,
     },
   });
@@ -65,9 +67,9 @@ function Tooltip({ children, message, buttonRef }: Props) {
                 width: 'max-content',
               },
             })}
-            className='rounded bg-gray-700 px-2 py-1 text-base text-gray-200 drop-shadow'
+            className='rounded bg-neutral-600 px-2 py-1 text-base font-[350] text-neutral-100 drop-shadow'
           >
-            {message}
+            {label}
           </div>,
           document.body
         )}

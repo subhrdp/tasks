@@ -20,11 +20,18 @@ function reducer(prevState: StateType, action: ActionType): StateType {
         ].sort((a, b) => a.label.localeCompare(b.label)),
       };
 
+    case 'change-list':
+      return {
+        ...prevState,
+        selected: action.payload,
+      };
+
     case 'delete-list':
       return {
+        ...prevState,
         lists: prevState.lists.filter((list) => list.id !== action.payload),
         tasks: prevState.tasks.filter((task) => task.list !== action.payload),
-        selected: 'inbox',
+        selected: 'Inbox',
       };
 
     case 'add-task':
@@ -33,18 +40,18 @@ function reducer(prevState: StateType, action: ActionType): StateType {
     case 'update-task':
       return {
         ...prevState,
+        tasks: prevState.tasks.map((task) =>
+          task.id === action.payload.id ? action.payload : task
+        ),
+      };
+
+    case 'toggle-task':
+      return {
+        ...prevState,
         tasks: [
           action.payload,
           ...prevState.tasks.filter((task) => task.id !== action.payload.id),
         ],
-      };
-
-    case 'update-task-time':
-      return {
-        ...prevState,
-        tasks: prevState.tasks.map((task) =>
-          task.id === action.payload.id ? action.payload : task
-        ),
       };
 
     case 'delete-task':
@@ -53,10 +60,10 @@ function reducer(prevState: StateType, action: ActionType): StateType {
         tasks: prevState.tasks.filter((task) => task.id !== action.payload),
       };
 
-    case 'change-selected-list':
+    case 'collapse-completed':
       return {
         ...prevState,
-        selected: action.payload,
+        collapseCompleted: action.payload,
       };
 
     default:

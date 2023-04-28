@@ -7,6 +7,7 @@ import {
   FloatingOverlay,
   FloatingFocusManager,
 } from '@floating-ui/react';
+import Button from './Button';
 
 type Props = {
   isOpen: boolean;
@@ -35,23 +36,23 @@ function ListModal({ isOpen, setIsOpen, callback }: Props) {
                 {...getFloatingProps()}
               >
                 <h2 className='text-xl text-red-500'>Delete Confirmation</h2>
-                <p className='mb-8 mt-4 text-lg text-gray-500'>
+                <p className='mb-8 mt-4 text-lg text-neutral-500'>
                   Are you sure you want to delete this list and all the tasks
                   inside it? This action cannot be undone.
                 </p>
                 <div className='flex flex-row-reverse'>
-                  <button
+                  <Button
                     onClick={callback}
-                    className='flex h-9 items-center rounded-lg bg-rose-500 px-4 text-lg text-white hover:bg-rose-600'
+                    className='bg-red-500 text-white hover:bg-red-600'
                   >
                     Confirm
-                  </button>
-                  <button
+                  </Button>
+                  <Button
                     onClick={() => setIsOpen(false)}
-                    className='mr-2 flex h-9 items-center rounded-lg border-2 border-gray-200 bg-gray-100 px-4 text-lg text-gray-600 hover:bg-gray-200'
+                    className='mr-2 border border-neutral-300 text-neutral-500 hover:bg-neutral-200 hover:text-neutral-600'
                   >
                     Cancel
-                  </button>
+                  </Button>
                 </div>
               </div>
             </FloatingFocusManager>

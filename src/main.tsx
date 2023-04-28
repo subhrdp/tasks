@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './tailwind.css';
 import '@fontsource/inter/variable.css';
 import 'overlayscrollbars/overlayscrollbars.css';
+import 'react-day-picker/dist/style.css';
 import './index.css';
 import App from './components/App';
 

@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { OverlayScrollbarsComponent } from 'overlayscrollbars-react';
 import { StateContext } from '../context';
-import ListButton from './ListButton';
+import SidebarButton from './SidebarButton';
 import List from './List';
 import CreateList from './CreateList';
 import { IconInbox, IconCalendarEvent, IconPin } from '@tabler/icons-react';
@@ -10,20 +10,19 @@ function Sidebar() {
   const state = useContext(StateContext);
 
   return (
-    <div className='flex w-80 flex-shrink-0 flex-col border-r border-gray-200 bg-gray-100'>
-      <ListButton id='inbox' className='mx-4 mb-1 mt-6'>
+    <div className='flex w-80 flex-shrink-0 flex-col border-r border-neutral-300/75 bg-neutral-200/50'>
+      <SidebarButton id='Inbox' className='mx-4 mb-1 mt-6'>
         <IconInbox />
-        Inbox
-      </ListButton>
-      <ListButton id='upcoming' className='mx-4 mb-1'>
+        <span className='mr-2'>Inbox</span>
+      </SidebarButton>
+      <SidebarButton id='Upcoming' className='mx-4 mb-1'>
         <IconCalendarEvent />
-        Upcoming
-      </ListButton>
-      <ListButton id='pinned' className='mx-4 mb-4'>
+        <span className='mr-2'>Upcoming</span>
+      </SidebarButton>
+      <SidebarButton id='Pinned' className='mx-4 mb-4'>
         <IconPin />
-        Pinned
-      </ListButton>
-
+        <span className='mr-2'>Pinned</span>
+      </SidebarButton>
       <OverlayScrollbarsComponent
         options={{
           scrollbars: {

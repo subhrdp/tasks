@@ -8,7 +8,8 @@ type Props = { children: React.ReactNode };
 const defaultState = {
   lists: [],
   tasks: [],
-  selected: 'inbox',
+  selected: 'Inbox',
+  collapseCompleted: false,
 };
 
 export const StateContext = createContext<StateType>(null!);
