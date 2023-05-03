@@ -51,7 +51,7 @@ function ListMenu({ reference, isOpen, setIsOpen, onRename, onDelete }: Props) {
                 width: 'max-content',
               },
             })}
-            className='z-10 rounded-lg border border-stone-300 bg-white p-1 pb-2 drop-shadow-lg before:absolute before:-top-2 before:left-0 before:h-2 before:w-full after:absolute after:-bottom-2 after:left-0 after:h-2 after:w-full'
+            className='z-20 rounded-lg border border-stone-300 bg-white p-1 pb-2 drop-shadow-lg before:absolute before:-top-2 before:left-0 before:h-2 before:w-full after:absolute after:-bottom-2 after:left-0 after:h-2 after:w-full'
           >
             <div className='mx-2 mb-1 flex h-10 items-center border-b border-stone-200 px-2 text-lg text-stone-400'>
               List Options
