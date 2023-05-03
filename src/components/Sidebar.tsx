@@ -10,7 +10,7 @@ function Sidebar() {
   const state = useContext(StateContext);
 
   return (
-    <div className='flex w-80 flex-shrink-0 flex-col border-r border-stone-300'>
+    <div className='flex w-80 flex-shrink-0 flex-col border-r border-stone-300 bg-white'>
       <SidebarButton id='Inbox' className='mx-4 mb-1 mt-6'>
         <IconInbox />
         <span className='mr-2'>Inbox</span>

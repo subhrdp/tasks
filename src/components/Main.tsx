@@ -26,7 +26,7 @@ function Main() {
     (state.selected === 'Upcoming' || state.selected === 'Pinned');
 
   return (
-    <div className='flex w-[calc(100%-20rem)] flex-col pb-8 pt-16'>
+    <div className='flex w-[calc(1280px-20rem)] flex-col bg-white pb-8 pt-16'>
       <h1 className='mx-16 mb-8 flex shrink-0 truncate text-xl'>
         <MainIcon selected={state.selected} />
         <span className='truncate'>{label}</span>

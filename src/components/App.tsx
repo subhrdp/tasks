@@ -5,11 +5,10 @@ import Main from './Main';
 function App() {
   return (
     <ContextProvider>
-      <div className='bg-stone-100'>
-        <div className='mx-auto flex h-screen max-w-screen-xl bg-white text-stone-600 drop-shadow-lg'>
-          <Sidebar />
-          <Main />
-        </div>
+      <div className='flex h-screen justify-center bg-stone-100 text-stone-600 drop-shadow-lg'>
+        <Sidebar />
+        <Main />
+        <div className='absolute -z-10 mx-auto h-screen w-[1280px] bg-stone-100 drop-shadow-lg'></div>
       </div>
     </ContextProvider>
   );
