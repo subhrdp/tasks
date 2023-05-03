@@ -28,7 +28,10 @@ function ListModal({ isOpen, setIsOpen, callback }: Props) {
     <>
       {isOpen &&
         createPortal(
-          <FloatingOverlay className='bg-black/40 backdrop-blur-sm' lockScroll>
+          <FloatingOverlay
+            className='z-30 bg-black/40 backdrop-blur-sm'
+            lockScroll
+          >
             <FloatingFocusManager context={context}>
               <div
                 className='m-auto mt-20 w-[32rem] rounded-lg bg-white p-8 text-stone-600 drop-shadow-lg'
