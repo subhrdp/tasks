@@ -34,9 +34,9 @@ function CreateTask() {
       ) : (
         <Button
           onClick={() => setCreate(true)}
-          className='w-full border border-neutral-300/75 bg-neutral-200/50 text-neutral-500 hover:bg-neutral-200 hover:text-neutral-600'
+          className='w-full bg-stone-200/50 ring-1 ring-inset ring-stone-200 hover:ring-stone-300'
         >
-          <IconPlus className='mr-2 stroke-[1.25] text-neutral-400' />
+          <IconPlus className='mr-2 stroke-[1.25] text-stone-400' />
           Create Task
         </Button>
       )}

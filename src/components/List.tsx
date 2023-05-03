@@ -6,7 +6,7 @@ import SidebarButton from './SidebarButton';
 import IconButton from './IconButton';
 import ListMenu from './ListMenu';
 import ListModal from './ListModal';
-import { IconList, IconDots } from '@tabler/icons-react';
+import { IconCheckbox, IconDots } from '@tabler/icons-react';
 import type { ListType } from '../context/types';
 
 type Props = {
@@ -22,10 +22,7 @@ function List({ list }: Props) {
 
   return (
     <li
-      className={clsx(
-        'group mx-4 mb-1 flex items-center rounded-lg hover:bg-neutral-200',
-        edit && 'relative'
-      )}
+      className={clsx('group mx-4 mb-1 flex items-center', edit && 'relative')}
     >
       {edit ? (
         <Input
@@ -42,7 +39,7 @@ function List({ list }: Props) {
       ) : (
         <>
           <SidebarButton id={list.id} className='peer w-full pr-10'>
-            <IconList className='flex-shrink-0' />
+            <IconCheckbox className='flex-shrink-0' />
             <span className='mr-2 truncate'>{list.label}</span>
           </SidebarButton>
           <IconButton

@@ -4,13 +4,13 @@ import { StateContext } from '../context';
 import SidebarButton from './SidebarButton';
 import List from './List';
 import CreateList from './CreateList';
-import { IconInbox, IconCalendarEvent, IconPin } from '@tabler/icons-react';
+import { IconInbox, IconCalendarEvent, IconPinned } from '@tabler/icons-react';
 
 function Sidebar() {
   const state = useContext(StateContext);
 
   return (
-    <div className='flex w-80 flex-shrink-0 flex-col border-r border-neutral-300/75 bg-neutral-200/50'>
+    <div className='flex w-80 flex-shrink-0 flex-col border-r border-stone-300'>
       <SidebarButton id='Inbox' className='mx-4 mb-1 mt-6'>
         <IconInbox />
         <span className='mr-2'>Inbox</span>
@@ -20,7 +20,7 @@ function Sidebar() {
         <span className='mr-2'>Upcoming</span>
       </SidebarButton>
       <SidebarButton id='Pinned' className='mx-4 mb-4'>
-        <IconPin />
+        <IconPinned />
         <span className='mr-2'>Pinned</span>
       </SidebarButton>
       <OverlayScrollbarsComponent

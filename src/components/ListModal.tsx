@@ -31,12 +31,12 @@ function ListModal({ isOpen, setIsOpen, callback }: Props) {
           <FloatingOverlay className='bg-black/40 backdrop-blur-sm' lockScroll>
             <FloatingFocusManager context={context}>
               <div
-                className='m-auto mt-20 w-[32rem] rounded-lg bg-white p-8 drop-shadow-lg'
+                className='m-auto mt-20 w-[32rem] rounded-lg bg-white p-8 text-stone-600 drop-shadow-lg'
                 ref={refs.setFloating}
                 {...getFloatingProps()}
               >
                 <h2 className='text-xl text-red-500'>Delete Confirmation</h2>
-                <p className='mb-8 mt-4 text-lg text-neutral-500'>
+                <p className='mb-8 mt-4 text-lg'>
                   Are you sure you want to delete this list and all the tasks
                   inside it? This action cannot be undone.
                 </p>
@@ -49,7 +49,7 @@ function ListModal({ isOpen, setIsOpen, callback }: Props) {
                   </Button>
                   <Button
                     onClick={() => setIsOpen(false)}
-                    className='mr-2 border border-neutral-300 text-neutral-500 hover:bg-neutral-200 hover:text-neutral-600'
+                    className='mr-2 border border-stone-300 hover:bg-stone-200/75'
                   >
                     Cancel
                   </Button>

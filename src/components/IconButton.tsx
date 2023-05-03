@@ -16,7 +16,7 @@ const IconButton = forwardRef<HTMLButtonElement, Props>(
             {...props}
             {...attrs}
             className={clsx(
-              'flex h-8 w-8 shrink-0 items-center justify-center rounded-lg text-neutral-600 hover:bg-neutral-300 [&>svg]:stroke-[1.25]',
+              'flex h-8 w-8 shrink-0 items-center justify-center rounded-lg hover:bg-stone-300/50 [&>svg]:stroke-[1.25]',
               className
             )}
           >

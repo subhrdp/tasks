@@ -19,7 +19,6 @@ export default {
           {
             lineHeight: '25px',
             letterSpacing: '-0.014em',
-            fontWeight: '450',
           },
         ],
         xl: [

@@ -25,8 +25,8 @@ function Date({ date, onChange }: Props) {
             className={clsx(
               'shrink-0',
               date
-                ? 'mr-2 h-7 rounded bg-neutral-200 px-2 text-base text-neutral-500 hover:!bg-neutral-400/50 group-hover:bg-neutral-300 group-hover:text-neutral-600'
-                : 'ml-1 flex h-8 w-8 items-center justify-center rounded-lg text-neutral-600 opacity-0 hover:bg-neutral-300 focus-visible:opacity-100 group-hover:opacity-100'
+                ? 'mr-2 h-7 rounded bg-stone-200 px-2 text-base text-stone-500 hover:!bg-stone-300 group-hover:bg-stone-300/75 group-hover:text-stone-600'
+                : 'ml-1 flex h-8 w-8 items-center justify-center rounded-lg opacity-0 hover:bg-stone-300/50 focus-visible:opacity-100 group-hover:opacity-100'
             )}
           >
             {date ? (

@@ -19,14 +19,14 @@ function SidebarButton({ id, children, className }: Props) {
     <Button
       onClick={() => dispatch({ type: 'change-list', payload: id })}
       className={clsx(
-        'text-neutral-500 hover:bg-neutral-200 hover:text-neutral-600 [&>svg]:mr-2 [&>svg]:stroke-[1.25] [&>svg]:text-neutral-400',
-        state.selected === id && 'bg-neutral-200 text-neutral-600',
+        'hover:bg-stone-200/75 group-hover:bg-stone-200/75 [&>svg]:mr-2 [&>svg]:stroke-[1.25] [&>svg]:text-stone-400',
+        state.selected === id && 'bg-stone-200/75',
         className
       )}
     >
       {children}
       {Boolean(count) && (
-        <span className='mr-2 text-base text-neutral-400'>({count})</span>
+        <span className='mr-2 text-base text-stone-400'>({count})</span>
       )}
     </Button>
   );

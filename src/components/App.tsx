@@ -5,7 +5,7 @@ import Main from './Main';
 function App() {
   return (
     <ContextProvider>
-      <div className='flex h-screen'>
+      <div className='flex h-screen bg-white text-stone-600'>
         <Sidebar />
         <Main />
       </div>

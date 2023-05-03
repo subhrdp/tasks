@@ -55,7 +55,7 @@ function DatePicker({ reference, isOpen, setIsOpen, date, onSelect }: Props) {
                 width: 'max-content',
               },
             })}
-            className='z-10 rounded-lg border border-neutral-300/75 bg-white text-base text-neutral-500 drop-shadow-lg before:absolute before:-top-2 before:left-0 before:h-2 before:w-full after:absolute after:-bottom-2 after:left-0 after:h-2 after:w-full'
+            className='z-10 rounded-lg border border-stone-300 bg-white text-base drop-shadow-lg before:absolute before:-top-2 before:left-0 before:h-2 before:w-full after:absolute after:-bottom-2 after:left-0 after:h-2 after:w-full'
           >
             <DayPicker
               mode='single'

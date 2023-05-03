@@ -1,8 +1,8 @@
 import {
   IconInbox,
   IconCalendarEvent,
-  IconPin,
-  IconList,
+  IconPinned,
+  IconCheckbox,
 } from '@tabler/icons-react';
 
 type Props = {
@@ -11,7 +11,7 @@ type Props = {
 
 function MainIcon({ selected }: Props) {
   const className =
-    'mr-2 flex-shrink-0 -ml-1 h-8 w-8 stroke-[1.25] text-neutral-400';
+    'mr-2 flex-shrink-0 -ml-1 h-8 w-8 stroke-[1.25] text-stone-400';
 
   if (selected === 'Inbox') {
     return <IconInbox className={className} />;
@@ -22,10 +22,10 @@ function MainIcon({ selected }: Props) {
   }
 
   if (selected === 'Pinned') {
-    return <IconPin className={className} />;
+    return <IconPinned className={className} />;
   }
 
-  return <IconList className={className} />;
+  return <IconCheckbox className={className} />;
 }
 
 export default MainIcon;

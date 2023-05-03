@@ -4,7 +4,7 @@ import { DispatchContext } from '../context';
 import IconButton from './IconButton';
 import Checkbox from './Checkbox';
 import Date from './Date';
-import { IconPinFilled, IconPin, IconTrash } from '@tabler/icons-react';
+import { IconPinnedFilled, IconPinned, IconTrash } from '@tabler/icons-react';
 import type { TaskType } from '../context/types';
 
 type Props = {
@@ -30,7 +30,7 @@ function Task({ task }: Props) {
   );
 
   return (
-    <ul className='group mx-8 mb-1 flex h-10 flex-shrink-0 items-center rounded-lg px-3 text-lg hover:bg-neutral-200 xl:mx-32'>
+    <ul className='group mx-8 mb-1 flex h-10 flex-shrink-0 items-center rounded-lg px-3 text-lg hover:bg-stone-200/75 xl:mx-32'>
       <Checkbox
         checked={task.completed}
         handleClick={() =>
@@ -42,10 +42,9 @@ function Task({ task }: Props) {
       />
       <span
         className={clsx(
-          'mx-2 truncate group-hover:text-neutral-600',
-          task.completed
-            ? 'text-neutral-400 line-through group-hover:no-underline'
-            : 'text-neutral-600'
+          'mx-2 truncate',
+          task.completed &&
+            'text-stone-400 line-through group-hover:text-stone-600 group-hover:no-underline'
         )}
       >
         {task.label}
@@ -70,7 +69,7 @@ function Task({ task }: Props) {
                 : 'ml-auto opacity-0 focus-visible:opacity-100 group-hover:opacity-100'
             )}
           >
-            {task.pinned ? <IconPinFilled /> : <IconPin />}
+            {task.pinned ? <IconPinnedFilled /> : <IconPinned />}
           </IconButton>
           {!task.date && date}
         </>

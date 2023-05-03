@@ -67,7 +67,7 @@ function Tooltip({ children, label, buttonRef }: Props) {
                 width: 'max-content',
               },
             })}
-            className='rounded bg-neutral-600 px-2 py-1 text-base font-[350] text-neutral-100 drop-shadow'
+            className='rounded bg-stone-600 px-2 py-1 text-base font-[350] text-stone-100 drop-shadow'
           >
             {label}
           </div>,

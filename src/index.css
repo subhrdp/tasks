@@ -3,9 +3,9 @@
   --os-padding-perpendicular: 2px;
   --os-padding-axis: 4px;
   --os-handle-border-radius: 8px;
-  --os-handle-bg: theme(colors.neutral.300);
-  --os-handle-bg-hover: theme(colors.neutral.400);
-  --os-handle-bg-active: theme(colors.neutral.400);
+  --os-handle-bg: theme(colors.stone.300/75%);
+  --os-handle-bg-hover: theme(colors.stone.400/75%);
+  --os-handle-bg-active: theme(colors.stone.400);
   --os-handle-interactive-area-offset: 2px;
 }
 
@@ -14,18 +14,18 @@
   --os-padding-perpendicular: 4px;
   --os-padding-axis: 4px;
   --os-handle-border-radius: 14px;
-  --os-handle-bg: theme(colors.neutral.400/50);
-  --os-handle-bg-hover: theme(colors.neutral.500/50);
-  --os-handle-bg-active: theme(colors.neutral.500/50);
+  --os-handle-bg: theme(colors.stone.400/75%);
+  --os-handle-bg-hover: theme(colors.stone.400);
+  --os-handle-bg-active: theme(colors.stone.500/50);
   --os-handle-interactive-area-offset: 4px;
 }
 
 .rdp {
   --rdp-cell-size: 32px;
   --rdp-accent-color: theme(colors.blue.500);
-  --rdp-background-color: theme(colors.neutral.200);
+  --rdp-background-color: theme(colors.stone.200/75%);
   --rdp-accent-color-dark: theme(colors.blue.500);
-  --rdp-background-color-dark: theme(colors.neutral.200);
+  --rdp-background-color-dark: theme(colors.stone.200/75%);
   margin: 1rem 0.5rem;
 }
 
@@ -34,29 +34,20 @@
   border-radius: 0.5rem;
 }
 
-.rdp-button:hover:not(.rdp-day_selected) {
-  color: theme(colors.neutral.600);
-}
-
 .rdp-caption {
-  border-bottom: 1px solid theme(colors.neutral.200);
+  border-bottom: 1px solid theme(colors.stone.200);
   margin-bottom: 0.5rem;
   padding-bottom: 0.25rem;
 }
 
-.rdp-caption_label {
-  color: theme(colors.neutral.500);
-}
-
 .rdp-head {
-  color: theme(colors.neutral.400);
+  color: theme(colors.stone.400);
 }
 
 .rdp-day_today {
-  font-weight: 450 !important;
+  font-weight: 400 !important;
 }
 
 .rdp-day_today:not(.rdp-day_selected) {
-  background-color: theme(colors.neutral.200);
-  color: theme(colors.neutral.600);
+  background-color: theme(colors.stone.200/75%);
 }
