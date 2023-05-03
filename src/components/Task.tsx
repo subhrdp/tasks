@@ -4,7 +4,7 @@ import { DispatchContext } from '../context';
 import IconButton from './IconButton';
 import Checkbox from './Checkbox';
 import Date from './Date';
-import { IconPinnedFilled, IconPinned, IconTrash } from '@tabler/icons-react';
+import { IconPinFilled, IconPin, IconTrash } from '@tabler/icons-react';
 import type { TaskType } from '../context/types';
 
 type Props = {
@@ -69,7 +69,7 @@ function Task({ task }: Props) {
                 : 'ml-auto opacity-0 focus-visible:opacity-100 group-hover:opacity-100'
             )}
           >
-            {task.pinned ? <IconPinnedFilled /> : <IconPinned />}
+            {task.pinned ? <IconPinFilled /> : <IconPin />}
           </IconButton>
           {!task.date && date}
         </>

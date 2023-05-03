@@ -4,7 +4,7 @@ import { StateContext } from '../context';
 import SidebarButton from './SidebarButton';
 import List from './List';
 import CreateList from './CreateList';
-import { IconInbox, IconCalendarEvent, IconPinned } from '@tabler/icons-react';
+import { IconInbox, IconCalendarEvent, IconPin } from '@tabler/icons-react';
 
 function Sidebar() {
   const state = useContext(StateContext);
@@ -20,7 +20,7 @@ function Sidebar() {
         <span className='mr-2'>Upcoming</span>
       </SidebarButton>
       <SidebarButton id='Pinned' className='mx-4 mb-4'>
-        <IconPinned />
+        <IconPin />
         <span className='mr-2'>Pinned</span>
       </SidebarButton>
       <OverlayScrollbarsComponent

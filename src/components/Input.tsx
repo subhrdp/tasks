@@ -41,7 +41,7 @@ function Input({ cancel, name, callback }: Props) {
         }}
         onBlur={cancel}
         autoFocus // eslint-disable-line
-        className='h-10 w-full rounded-lg bg-stone-200/50 pl-12 pr-4 text-lg outline-none ring-1 ring-inset ring-blue-500'
+        className='h-10 w-full rounded-lg bg-stone-200/50 pl-12 pr-4 text-lg outline-none ring-2 ring-inset ring-blue-500'
       />
       <IconForms className='absolute left-4 top-2 h-6 w-6 stroke-[1.25] text-stone-400' />
     </>
