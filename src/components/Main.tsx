@@ -27,7 +27,7 @@ function Main() {
 
   return (
     <div className='flex w-[calc(100%-20rem)] flex-col pb-8 pt-16'>
-      <h1 className='mx-12 mb-8 flex shrink-0 truncate text-xl xl:mx-36'>
+      <h1 className='mx-16 mb-8 flex shrink-0 truncate text-xl'>
         <MainIcon selected={state.selected} />
         <span className='truncate'>{label}</span>
       </h1>
@@ -37,7 +37,7 @@ function Main() {
       )}
 
       {showBanner && (
-        <div className='mx-8 flex h-10 items-center rounded-lg bg-stone-200/50 px-6 text-lg text-stone-500 ring-1 ring-inset ring-stone-200 xl:mx-32'>
+        <div className='mx-12 flex h-10 items-center rounded-lg bg-stone-200/50 px-6 text-lg text-stone-500 ring-1 ring-inset ring-stone-200'>
           {state.selected} tasks will appear here
         </div>
       )}
@@ -46,7 +46,7 @@ function Main() {
         options={{
           scrollbars: {
             autoHide: 'never',
-            theme: 'os-theme-main',
+            theme: 'os-custom-theme',
           },
         }}
         defer
@@ -72,7 +72,7 @@ function Main() {
               })
             }
             className={clsx(
-              'mb-1 ml-8 w-fit text-stone-400 hover:bg-stone-200/75 hover:text-stone-600 xl:ml-32',
+              'mb-1 ml-12 w-fit text-stone-400 hover:bg-stone-200/75 hover:text-stone-600',
               Boolean(todo.length) && 'mt-4'
             )}
           >

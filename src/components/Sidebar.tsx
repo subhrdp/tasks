@@ -28,7 +28,7 @@ function Sidebar() {
           scrollbars: {
             autoHide: 'leave',
             autoHideDelay: 250,
-            theme: 'os-theme-sidebar',
+            theme: 'os-custom-theme',
           },
         }}
         defer

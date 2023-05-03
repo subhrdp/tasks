@@ -1,4 +1,4 @@
-.os-theme-sidebar {
+.os-custom-theme {
   --os-size: 8px;
   --os-padding-perpendicular: 2px;
   --os-padding-axis: 4px;
@@ -7,17 +7,6 @@
   --os-handle-bg-hover: theme(colors.stone.400/75%);
   --os-handle-bg-active: theme(colors.stone.400);
   --os-handle-interactive-area-offset: 2px;
-}
-
-.os-theme-main {
-  --os-size: 14px;
-  --os-padding-perpendicular: 4px;
-  --os-padding-axis: 4px;
-  --os-handle-border-radius: 14px;
-  --os-handle-bg: theme(colors.stone.400/75%);
-  --os-handle-bg-hover: theme(colors.stone.400);
-  --os-handle-bg-active: theme(colors.stone.500/50);
-  --os-handle-interactive-area-offset: 4px;
 }
 
 .rdp {

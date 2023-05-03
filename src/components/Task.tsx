@@ -30,7 +30,7 @@ function Task({ task }: Props) {
   );
 
   return (
-    <ul className='group mx-8 mb-1 flex h-10 flex-shrink-0 items-center rounded-lg px-3 text-lg hover:bg-stone-200/75 xl:mx-32'>
+    <ul className='group mx-12 mb-1 flex h-10 flex-shrink-0 items-center rounded-lg px-3 text-lg hover:bg-stone-200/75'>
       <Checkbox
         checked={task.completed}
         handleClick={() =>
